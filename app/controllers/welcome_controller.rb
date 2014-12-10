@@ -2,12 +2,10 @@ class WelcomeController < ApplicationController
   skip_before_action :authenticate_user!
 
     def index
-      @torents = Torent.all
-
-      # Let's DYNAMICALLY build the markers for the view.
-      @markers = Gmaps4rails.build_markers(@torents) do |torent, marker|
-        marker.lat flat.latitude
-        marker.lng flat.longitude
-      end
+        @rentables = Rentable.all
+        @hash = Gmaps4rails.build_markers(@rentables) do |rentable, marker|
+          marker.lat rentable.latitude
+          marker.lng rentable.longitude
+        end
     end
 end

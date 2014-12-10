@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 
 ruby '2.1.2'
 gem 'rails_12factor', group: :production
@@ -18,6 +17,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 gem 'figaro'
+
+gem 'money-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -47,7 +48,9 @@ gem 'bootstrap_form'
 
 gem 'autoprefixer-rails'
 
+gem "pundit"
 
+gem 'simple_form'
 
 gem 'devise'
 gem 'omniauth-facebook'
@@ -57,6 +60,9 @@ gem "geocoder"
 gem "gmaps4rails"
 gem "rails-assets-underscore"
 
+# Gemfile upload images
+gem 'aws-sdk'
+gem 'paperclip'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

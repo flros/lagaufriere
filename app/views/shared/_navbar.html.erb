@@ -1,83 +1,90 @@
+
+
+
 <div id="navbar-full">
 
 
-    <div id="navbar">
+  <div id="navbar">
 
-       <% if user_signed_in? %>
-            <%= current_user.email %>
-            <%= link_to 'Sign out', destroy_user_session_path, method: 'delete' %>
-          <% else %>
-            <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-          <% end %>
+
        <!--
         navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange
-        -->
-        <nav class="navbar navbar-ct-red navbar-fixed-top navbar-transparent" role="navigation">
+      -->
+      <nav class="navbar navbar-ct-red navbar-fixed-top navbar-transparent" role="navigation">
 
-          <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand navbar-brand-logo" href="http://http://www.la-gaufriere.com/">
-                    <div class="logo">
-                    <img src="http://img15.hostingpics.net/pics/874429resizedwaffle.png">
-                    </div>
-                    <div class="brand">La Gaufrière</div>
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand navbar-brand-logo" href="http://http://www.la-gaufriere.com/">
+              <div class="logo">
+                <img src="http://img15.hostingpics.net/pics/874429resizedwaffle.png">
+              </div>
+              <div class="brand">La Gaufrière</div>
+
+            </a>
+
+
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="welcome/index">
+                  <i class="fa fa-home"></i>
+                  <!--     <span class="label">0</span> -->
+                </i>
+                <p>Home</p>
               </a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/pages/home">
-                            <i class="fa fa-home"></i>
-                            <!--     <span class="label">0</span> -->
-                            </i>
-                            <p>Home</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/pages/contact">
-                            <i class="fa fa-envelope"></i>
-                            <!--     <span class="label">0</span> -->
-                            </i>
+            </li>
+            <li>
+              <a href="/pages/contact">
+                <i class="fa fa-envelope"></i>
+                <!--     <span class="label">0</span> -->
+              </i>
 
-                            <p>Contact</p>
-                            <!-- pourquoi quand je passe par ruby j'ai un espace entre l'envelope et le mot? -->
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-question"></i>
-                                <p>About</p>
-                            </a>
-                          <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                          </ul>
-                    </li>
-               </ul>
+              <p>Contact</p>
+              <!-- pourquoi quand je passe par ruby j'ai un espace entre l'envelope et le mot? -->
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-question"></i>
+              <p>About</p>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
 
 
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 
-        </nav>
+    <!--           facebook auth integration chercher dans mes mails-->
 
-       <div class="blurred-container">
-            <div class="img-src background"></div>
-        </div>
-        </div>
-    </div><!--  end navbar -->
+
+   <!-- end of facebook auth integration -->
+
+ </nav>
+
+ <div class="blurred-container">
+  <div class="img-src background"></div>
+</div>
+</div>
+</div><!--  end navbar -->
 
 </div> <!-- end menu-dropdown -->

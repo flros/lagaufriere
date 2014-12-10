@@ -1,0 +1,59 @@
+
+<h2>Rentable objects list</h2>
+
+
+
+<table class='table'>
+  <thead>
+    <tr class="success">
+
+      <th>Title</th>
+      <th>Address</th>
+      <th>Description</th>
+      <th>Price</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rentables.each do |rentable| %>
+    <tr class="active">
+      <td><%= rentable.title %></td>
+      <td><%= rentable.address %></td>
+      <td><%= rentable.description %></td>
+      <td><%= rentable.price %></td>
+      <td><%= link_to 'Show', rentable %></td>
+      <td><%= link_to 'Edit', edit_rentable_path(rentable) %></td>
+      <td><%= link_to 'Destroy', rentable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rentable', new_rentable_path %>
+
+<br>
+
+
+
+<div class="vignettes">
+
+  <% @rentables.each do |rentable| %>
+
+  <div class="float print">
+     <%= image_tag rentable.picture.url(:medium) %>
+     <p><%= rentable.title %></p>
+  </div>
+
+ <div class="hiddenfloat">
+    <%= rentable.address %>
+    <%= rentable.description %>
+ </div>
+
+<!--  remplacer par une autre div... -->
+ <% end %>
+
+</div>

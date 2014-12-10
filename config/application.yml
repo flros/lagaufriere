@@ -1,3 +1,7 @@
 development:
   FB_ID: "732850523463346"
   FB_SECRET: "a9aa36fa09a155554f351d74f8372e02"
+
+S3_BUCKET_NAME: lagaufriere         # \
+AWS_ACCESS_KEY_ID: AKIAJYDEJU3ECDORTYNQ #  |- Change these values
+AWS_SECRET_ACCESS_KEY: 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  # /

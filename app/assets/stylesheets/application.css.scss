@@ -40,4 +40,16 @@
     filter: invert(100%);
 }
 
+div.float {
+  float: left;
+ }
 
+div.float p {
+  text-align: center;
+  }
+
+  .hiddenfloat {
+    display: none;
+    background-color: black;
+    color:white;
+  }

@@ -1,17 +1,60 @@
-<h1>HELLO WORLD</h1>
+<p>
+  <div class="facebook">
+      <% if user_signed_in? %>
+      <%= image_tag current_user.picture, class: "img img-circle" %>
+      <%= current_user.name %>
+      <%= link_to 'Sign out', destroy_user_session_path, method: 'delete' %>
+      <% else %>
+      <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+      <% end %>
+    </div>
+
+</p>
 
 
-<div id="map" style="width: 100%; height: 600px;"></div>
+<h1 class="text-center">
+ <b>
+   La Gaufrière
+   <% @date %>
+   <br>
+ </b>
+ <small class="subtitle"><i>Préservez votre espace tout en bénéficiant d'un large choix d'ustensiles de cuisine à deux pas de chez vous...
+ </i></small>
+</h1>
 
-<% content_for(:js) do %>
-  <%= javascript_tag do %>
-    $(document).on('ready', function() {
-      handler = Gmaps.build('Google');
-      handler.buildMap({ internal: { id: 'map' } }, function(){
-        markers = handler.addMarkers(<%= raw @markers.to_json %>);
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-      });
-    })
-  <% end %>
-<% end %>
+<div class="container">
+  <div class="text center">
+   <div style='width: 750px;'>
+     <div id="map" style='width: 750px; height: 400px;'></div>
+   </div>
+   <script type="text/javascript">
+   handler = Gmaps.build('Google');
+   handler.buildMap({
+    provider: {
+      scrollwheel: false
+    },
+    internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers(<%=raw @hash.to_json %>);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
+   </script>
+   <br>
+
+   <h4 class="text-danger"><i>
+   </i></h4>
+   <div class="text center">
+    <a href="/rentables/new" <button type="button" class="btn btn-warning btn-lg dropdown-toggle" role="button">
+      Add your Object
+    </a>
+
+    <br> <br>
+
+    <a href="/rentables" <button type="button" class="btn btn-danger btn-lg dropdown-toggle" role="button">
+      Show all rentable objects
+    </a>
+
+  </div>
+
+</div>
+</div>

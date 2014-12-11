@@ -15,6 +15,15 @@ class RentablesController < ApplicationController
     respond_with(@rentable)
   end
 
+  def search
+    @rentable = Rentable.new
+    Rentable.near(@rentable_params, 1)
+    respond_with(@rentable)
+  end
+
+  # WTF?
+
+
   def new
     @rentable = Rentable.new
     respond_with(@rentable)

@@ -18,10 +18,14 @@
 //= require_tree .
 
 
-$('.vignettes').hover(function() {
-        $(this).find('.print').hide();
-        $(this).find('.hiddenfloat').show();
-    }, function() {
-        $(this).find('.hiddenfloat').hide();
-        $(this).find('.print').show();
+
+$(document).ready(function(){
+  $('.test').hover(function() {
+          $(this).find('.floatinitial').hide();
+          $(this).find('.hiddenfloat').show();
+      }, function() {
+          $(this).find('.hiddenfloat').hide();
+          $(this).find('.floatinitial').show();
+   });
 });
+

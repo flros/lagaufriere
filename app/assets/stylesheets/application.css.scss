@@ -40,16 +40,37 @@
     filter: invert(100%);
 }
 
-div.float {
+.floatinitial {
+  margin: 20px;
+  height:300px;
+  width:300px;
   float: left;
+  border-style: solid;
+  border-width: 2px;
  }
 
-div.float p {
+.floatinitial p {
   text-align: center;
   }
 
-  .hiddenfloat {
-    display: none;
-    background-color: black;
-    color:white;
-  }
+.hiddenfloat {
+  margin: 20px;
+  display: none;
+  background-color: black;
+  opacity: 0,8;
+  color : white;
+  height:300px;
+  width:300px;
+  float: left;
+  border-style: solid;
+  border-width: 2px;
+   }
+
+.hiddenfloat p {
+    margin-bottom: auto;
+    text-align: center;
+    }
+
+
+
+
